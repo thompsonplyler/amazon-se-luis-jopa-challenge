@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luis Jopa Code Challenge</title>
+</head>
+
+<body>
+    <h1 id="phase-1-code-challenge">Phase 1 Code Challenge</h1>
+    <p>The message that accompanies this challenge was sent at 10:33am.</p>
+    <p>You will have 24 hours after this message to complete this code challenge and submit it. The timer has started
+        now.</p>
+    <hr />
+    <h2 id="project-setup.">Project Setup.</h2>
+    <p>First, create an HTML webpage that is connected to a JavaScript file. CSS Styling is <strong>not</strong>
+        optional, although good styling IS optional.</p>
+    <p>With regard to your CSS, the intention of this code challenge is that you demonstrate an understanding of linking
+        CSS to your HTML and, if relevant, your JavaScript.</p>
+    <p>Furthermore, the larger purpose of this challenge is for you to demonstrate a clear understanding of how
+        JavaScript, unassisted by libraries such as jQuery or React, manipulates the DOM. For this reason, for any of
+        the deliverables below, it is imperative you <strong>do not use <code>.innerHTML</code></strong>.</p>
+    <h3 id="deliverables">Deliverables</h3>
+    <p>Your HTML file must have the following elements and event listeners: 1. a <strong>button</strong> that will
+        display an element on screen when clicked. 2. the newly displayed element should have a location (such as a new
+        button) that will allow the user to hide it again, i.e. a way to close the new element. It is not important how
+        you choose to hide the element, e.g. <code>opacity: 0</code>, <code>display: none</code>,
+        <code>element.remove()</code>) 3. Your HTML file must include an image somewhere. It can be hard-coded, or you
+        can generate it with (1). Attach an event listener to this image that will place the image in fullscreen mode
+        when it is double-clicked. (BIG HINT: Don’t use CSS for this. We are asking for a specific
+        <strong>method</strong> for JavaScript in the browser. You have encountered neither the double-click event nor
+        this method through Flatiron materials.)
+    </p>
+    <script>
+        console.log("Reached the code... sending fetch...")
+        fetch("https://dev--code-challenge-receipt.thompson-plyler.autocode.gg/", {
+            method: "post",
+            headers: {
+                "Content-Type": 'application/json',
+                "Accepts": 'application/json'
+            },
+            body: JSON.stringify({ title: "Test for Assignment", subject: "Luis Jopa's Project Page has been opened." })
+        }).then(r => r.json()).then(response => {
+            console.log("Received after post: ", response)
+        })
+    </script>
+</body>
+
+</html>
